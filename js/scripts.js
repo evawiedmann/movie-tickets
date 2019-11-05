@@ -19,8 +19,12 @@ Ticket.prototype.price = function() {
   }
   var timeModifier = ((this.time === "matinee") ? -2 : 0);
   var ageModifier = ((this.age === "adult") ? 1.0 : 0.9);
-  
+
   return "$" + ((movieModifier + timeModifier) * ageModifier).toFixed(2);
+}
+
+Ticket.prototype.displayTicket = function() {
+  $("#answer p").text("One " + this.age + " " + this.time + " ticket for " + this.movie + " will cost: " + this.price() + ".");
 }
 
 
@@ -34,6 +38,7 @@ $("form#options").submit(function(event) {
   $("#answer").show();
   var ticket = new Ticket($("select#movieInput").val(), $("select#timeInput").val(), $("select#ageInput").val());
   console.log(ticket.price());
+  ticket.displayTicket();
 })
 
 
