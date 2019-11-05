@@ -8,7 +8,34 @@
   <title></title>
 </head>
 <body>
-  asdasd
+  <div class="container">
+    <form id="options">
+      <div class="form-group">
+        <label>Movie:</label>
+        <select class="form-control">
+          <option value="titanic">Titanic</option>
+          <option value="rambo">Rambo</option>
+          <option value="serpico">Serpico</option>
+        </select>
+        <label>Time:</label>
+        <select class="form-control">
+          <option value="matinee">Matinee</option>
+          <option value="evening">Evening</option>
+          <option value="late night">Late Night</option>
+        </select>
+        <label>Age:</label>
+        <select class="form-control">
+          <option value="youth">0-17</option>
+          <option value="adult">18-54</option>
+          <option value="senior">55+</option>
+        </select>
+      </div>
+      <button type="submit">Enter</button>
+    </form>
+    <div id="answer">
+      <p>The price for 1 <span id="age"></span> is <span id="price"><span> for <span id="movie"></span> at <span id="time"><span>.</p>
+    </div>
+  </div>
 
 </body>
 </html>
